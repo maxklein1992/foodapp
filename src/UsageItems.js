@@ -52,7 +52,7 @@ function UsageItems( ) {
                 array[j].usage = array[j].usage * 9.769;
                 array[j].cost = array[j].usage * 0.06;
             }
-            else if(array[j].type === 1 && array[j].isDaytime === 1 || array[j].isWeekend === 0) {
+            else if(array[j].type === 1 && array[j].isDaytime === 1 && array[j].isWeekend === 0) {
                 array[j].usage = array[j].usage / 1000;
                 array[j].cost = array[j].usage * 0.20;
             }
