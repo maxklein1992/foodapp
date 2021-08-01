@@ -57,7 +57,7 @@ function UsageItems( ) {
                 array[j].cost = array[j].usage * 0.20;
             }
             else{
-                array[j].usage = array[j].usage * 9.769;
+                array[j].usage = array[j].usage / 1000;
                 array[j].cost = array[j].usage * 0.18;                
             }
         }
