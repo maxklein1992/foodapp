@@ -68,11 +68,9 @@ function App() {
               array[j].usage = array[j].usage / 1000;
               array[j].cost = array[j].usage * 0.18;                
           }
-      }
+      }      
 
-      return array;
-
-      /*var sumValues =  array.reduce(function(final,item){
+      var sumValues =  array.reduce(function(final,item){
           if(final[item.meteringsPointId]){
             final[item.meteringsPointId] = {meteringsPointId: item.meteringsPointId, type: item.type, cost: item.cost+final[item.meteringsPointId].cost, reading: item.reading};
           }else{
@@ -82,10 +80,7 @@ function App() {
         },{});
       var new_data = Object.values(sumValues);
   
-      return new_data;
-      */
-
-
+      return new_data; 
 
   };
 
