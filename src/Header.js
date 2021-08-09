@@ -29,6 +29,7 @@ const Container = styled.div`
     justify-content: start;
     color: white;
     font-size: 14px;
+    border-bottom: 2px solid yellow;
 `
 
 const HeaderLogo = styled.div`

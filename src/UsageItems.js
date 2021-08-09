@@ -33,6 +33,7 @@ const Container = styled.div`
     margin-right: 18px;
     padding: 20px;
     border-radius: 5px;
+    border: 2px solid yellow;
 `
 
 const Title = styled.div`

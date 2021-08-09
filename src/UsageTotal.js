@@ -23,6 +23,7 @@ const Container = styled.div`
     flex: 0.2;
     padding: 20px;
     border-radius: 5px;
+    border: 2px solid yellow;
 `
 
 const Title = styled.div`
