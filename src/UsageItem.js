@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { UsageItems } from './UsageItems'
 
 function UsageItem( {id, cost} ) {
     return (
@@ -12,11 +13,14 @@ function UsageItem( {id, cost} ) {
             </MeteringPoint>
     
             <Cost>
-                $ {cost}
+                $ {cost.toFixed(2)}                        
             </Cost>
             
         </Container>
+        
     )
+
+
 }
 
 export default UsageItem

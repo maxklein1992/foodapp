@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import UsageItems from './UsageItems'
 import UsageTotal from './UsageTotal'
 
-function Home( ) {
+function Home({ rows, totalCost }) {
 
     return (
         <Container>
@@ -17,8 +17,12 @@ function Home( ) {
             </Banner>
             
             <Usage>
-                <UsageItems />
-                <UsageTotal />
+                <UsageItems 
+                    rows={rows}                
+                />
+                <UsageTotal 
+                    totalCost={totalCost}                                
+                />
             </Usage>
         </Container>
     )
