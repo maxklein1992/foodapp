@@ -5,9 +5,6 @@ import Home from './Home';
 import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { header, homePage } from './utils/Data';
 
-
-import UsageItems from "./UsageData";
-
 function App() {
 
   const [ rows, setRows] = useState([]);
