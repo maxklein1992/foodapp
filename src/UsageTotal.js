@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components'
 
-function UsageTotal( {totalCost} ) {
+function UsageTotal({ totalCost, totalCostTitle }) {
 
     return (
         <Container>
             <Title>
-                Total
+                {totalCostTitle}
             </Title>
             <TotalValue>
                 $ {Math.round(totalCost * 100) / 100}

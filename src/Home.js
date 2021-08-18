@@ -3,25 +3,27 @@ import styled from 'styled-components'
 import UsageItems from './UsageItems'
 import UsageTotal from './UsageTotal'
 
-function Home({ rows, totalCost }) {
+function Home({ rows, totalCost, headerLineOne, headerLineTwo, itemsTitle, totalCostTitle }) { 
 
     return (
         <Container>
             <Banner>
                 <TitleLineOne>
-                    The Total Costs
+                    {headerLineOne}
                 </TitleLineOne>
                 <TitleLineTwo>
-                    Of Your Energy Usage
+                    {headerLineTwo}
                 </TitleLineTwo>
             </Banner>
             
             <Usage>
                 <UsageItems 
-                    rows={rows}                
+                    rows={rows}  
+                    itemsTitle={itemsTitle}             
                 />
                 <UsageTotal 
-                    totalCost={totalCost}                                
+                    totalCost={totalCost}  
+                    totalCostTitle={totalCostTitle} 
                 />
             </Usage>
         </Container>

@@ -3,6 +3,8 @@ import './App.css';
 import Header from './Header';
 import Home from './Home';
 import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { header, homePage } from './utils/Data';
+
 
 import UsageItems from "./UsageData";
 
@@ -109,10 +111,10 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
+        <Header {...header} />
         <Switch>
           <Route path="/">
-            <Home 
+            <Home {...homePage} 
               rows={rows}
               totalCost={totalCost}          
             />

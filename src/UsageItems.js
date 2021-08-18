@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import UsageItem from './UsageItem'
 
-function UsageItems({ rows }) {
+function UsageItems({ rows, itemsTitle }) {
 
     return (
         <Container>
             <Title>
-                Overview of usage 
+                {itemsTitle} 
             </Title>
             
             {rows.map((row, i) => (
