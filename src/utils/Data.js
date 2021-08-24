@@ -1,17 +1,35 @@
-export const header = {
-  titleLineOne: "An Overview",
-  titleLineTwo: "Of Your Usage",
-};
-
-export const homePage = {
-    // Header
-    headerLineOne: "The Total Costs",
-    headerLineTwo: "Of Your Energy Usage",
-
-    // Items block
-    itemsTitle: "Overview of usage",
-
-    // Total costs block
-    totalCostTitle: "Total",    
-  };
+export const restaurants = [
+    {
+      id: 1,
+      title: 'Coach Sports Bar',
+      alt: 'coach',
+      image:
+        '../coach.png',
+      location: `Lisbon`,
+    },
+    {
+      id: 2,
+      title: 'Lat.a Bar',
+      alt: 'lata',
+      image:
+        '../lata.png',
+      location: `Lisbon`,
+    },
+    {
+      id: 3,
+      title: 'Machimbombo',
+      alt: 'machimbombo',
+      image:
+        '../machimbombo.png',
+      location: `Lisbon`,
+    },
+    {
+      id: 4,
+      title: 'Aqua de Beber',
+      alt: 'aquadebeber',
+      image:
+        '../aquadebeber.png',
+      location: `Lisbon`,
+    },
+  ];
   
