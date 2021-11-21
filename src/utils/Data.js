@@ -5,7 +5,12 @@ export const restaurants = [
       alt: 'coach',
       image:
         '../coach.png',
-      location: `Lisbon`,
+      city: `Lisbon`,
+      country: `Portugal`,
+      reviewPercentage: 89,
+      numberOfReviews: 423,
+      typeOfFood: 'American',
+      expensiveRate: '€€',
     },
     {
       id: 2,
@@ -13,7 +18,12 @@ export const restaurants = [
       alt: 'lata',
       image:
         '../lata.png',
-      location: `Lisbon`,
+      city: `Lisbon`,
+      country: `Portugal`,
+      reviewPercentage: 98,
+      numberOfReviews: 213,
+      typeOfFood: 'Brazilian',
+      expensiveRate: '€€',
     },
     {
       id: 3,
@@ -21,7 +31,12 @@ export const restaurants = [
       alt: 'machimbombo',
       image:
         '../machimbombo.png',
-      location: `Lisbon`,
+      city: `Lisbon`,
+      country: `Portugal`,
+      reviewPercentage: 74,
+      numberOfReviews: 111,
+      typeOfFood: 'Portuguese',
+      expensiveRate: '€€€',
     },
     {
       id: 4,
@@ -29,7 +44,12 @@ export const restaurants = [
       alt: 'aquadebeber',
       image:
         '../aquadebeber.png',
-      location: `Lisbon`,
+      city: `Lisbon`,
+      country: `Portugal`,
+      reviewPercentage: 95,
+      numberOfReviews: 1213,
+      typeOfFood: 'Brazilian',
+      expensiveRate: '€€',
     },
   ];
   
