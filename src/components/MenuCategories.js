@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { kitchens } from '../utils/data';
 
 function Home() { 
 
@@ -12,40 +13,17 @@ function Home() {
                             What's on the menu?
                         </p>
                         <div className="pt-6">
-                            <button className="bg-yellow py-3 px-6 mr-7 mb-5">
-                                italian
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7  mb-5">
-                                indian
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7  mb-5">
-                                brazilian
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7  mb-5">
-                                chinese
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7  mb-5">
-                                portuguese
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7  mb-5">
-                                american
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7  mb-5">
-                                vietnamese
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7  mb-5">
-                                spanish
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7 mb-5">
-                                thai
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7 mb-5">
-                                japenese
-                            </button>
-                            <button className="bg-yellow py-3 px-6 mr-7 mb-5">
-                                mexican
-                            </button>                           
-                        </div>
+                            {kitchens.map((kitchen) => {
+                                const {
+                                    type,
+                                } = kitchen;
+                                return (
+                                    <button className="bg-yellow py-3 px-6 mr-7 mb-5">
+                                        {type}
+                                    </button>                        
+                                );
+                                })}
+                        </div>  
                     </div>
                 </div>            
             </div>

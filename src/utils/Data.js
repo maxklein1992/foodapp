@@ -52,4 +52,37 @@ export const restaurants = [
       expensiveRate: '€€',
     },
   ];
+
+export const kitchens = [
+    {
+      type: 'italian'
+    },
+    {
+      type: 'chinese'
+    },
+    {
+      type: 'indian'
+    },
+    {
+      type: 'portuguese'
+    },
+    {
+      type: 'american'
+    },
+    {
+      type: 'spanish'
+    },
+    {
+      type: 'mexican'
+    },
+    {
+      type: 'brazilian'
+    },
+    {
+      type: 'japanese'
+    },
+    {
+      type: 'greece'
+    }
+  ];
   
