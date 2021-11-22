@@ -12,7 +12,7 @@ function Home() {
                         <p className="text-gray text-l ds:text-2xl">
                             What's on the menu?
                         </p>
-                        <div className="pt-6">
+                        <div className="pt-6 flex flex-col flex-wrap ds:flex-row">
                             {kitchens.map((kitchen) => {
                                 const {
                                     type,
