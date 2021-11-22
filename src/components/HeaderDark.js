@@ -2,13 +2,13 @@ import React from 'react'
 import SearchIcon from './icons/search.png';
 import PlaceHolder from './icons/placeholder.png';
 
-function Header() {
+function HeaderDark() {
     return (
         <div class="h-72 ds:h-96 bg-gray w-full">
             <div class="pr-12 pl-12 ds:pr-48 ds:pl-48">
                 <div class="pt-8 ds:pt-8">
-                    <h1 className="text-white text-xl ds:text-4xl ds:inline-block">Menu Check</h1>
-                    <a href="https://www.linkedin.com/in/maxklein1992/" target="_blank" rel="noreferrer" className="text-yellow text-sm ds:text-xl hover:underline ds:inline-block ds:ml-6">by Max Klein</a>
+                    <a href="/" className="text-white text-xl ds:text-4xl block ds:inline-block">Menu Check</a>
+                    <a href="https://www.linkedin.com/in/maxklein1992/" target="_blank" rel="noreferrer" className="text-yellow text-sm ds:text-xl hover:underline block ds:inline-block ds:ml-6">by Max Klein</a>
                 </div>
                 <div class="pt-8 ds:pt-24">
                     <h1 className="text-white text-sm ds:text-2xl">See of all the restaurants the menu in photos before you eat</h1>
@@ -23,7 +23,7 @@ function Header() {
     )
 }
 
-export default Header
+export default HeaderDark
 
 
 /*const Container = styled.div`

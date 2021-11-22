@@ -19,7 +19,7 @@ export const restaurants = [
       image:
         '../lata.png',
       city: `Lisbon`,
-      country: `Portugal`,
+      country: "Portugal",
       reviewPercentage: 98,
       numberOfReviews: 213,
       typeOfFood: 'Brazilian',
@@ -32,7 +32,7 @@ export const restaurants = [
       image:
         '../machimbombo.png',
       city: `Lisbon`,
-      country: `Portugal`,
+      country: "Portugal",
       reviewPercentage: 74,
       numberOfReviews: 111,
       typeOfFood: 'Portuguese',
@@ -45,44 +45,43 @@ export const restaurants = [
       image:
         '../aquadebeber.png',
       city: `Lisbon`,
-      country: `Portugal`,
+      country: "Portugal",
       reviewPercentage: 95,
       numberOfReviews: 1213,
       typeOfFood: 'Brazilian',
+      expensiveRate: '€€',
+    },
+    {
+      id: 5,
+      title: 'Al Garage',
+      alt: 'algarage',
+      image:
+        '../aquadebeber.png',
+      city: `Lisbon`,
+      country: "Portugal",
+      reviewPercentage: 90,
+      numberOfReviews: 313,
+      typeOfFood: 'Italian',
       expensiveRate: '€€',
     },
   ];
 
 export const kitchens = [
     {
-      type: 'italian'
+      type: 'italian',
+      href: '/restaurants/italian'
     },
     {
-      type: 'chinese'
+      type: 'asian',
+      href: '/restaurants/asian'
     },
     {
-      type: 'indian'
+      type: 'spanish',
+      href: '/restaurants/spanish'
     },
     {
-      type: 'portuguese'
-    },
-    {
-      type: 'american'
-    },
-    {
-      type: 'spanish'
-    },
-    {
-      type: 'mexican'
-    },
-    {
-      type: 'brazilian'
-    },
-    {
-      type: 'japanese'
-    },
-    {
-      type: 'greece'
+      type: 'brazilian',
+      href: '/restaurants/brazilian'
     }
   ];
   

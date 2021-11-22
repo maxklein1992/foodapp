@@ -13,12 +13,12 @@ function Home() {
                         <p className="text-gray text-l ds:text-2xl">
                             Latest Restaurants
                         </p>
-                        <p className="text-gray text-xs ds:text-xl underline mr-8">
+                        <a href="/restaurants" className="text-gray text-xs ds:text-xl underline mr-8">
                             See all
-                        </p>
+                        </a>
                     </div>
                     <div className="pt-6 flex flex-col ds:flex-row ds:justify-between">
-                            {restaurants.map((restaurant) => {
+                            {restaurants.slice(0, 4).map((restaurant) => {
                                 const {
                                     id,
                                     title,

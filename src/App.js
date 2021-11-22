@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Header from './components/Header';
-import LatestRestaurants from './components/LatestRestaurants';
-import MenuCategories from './components/MenuCategories';
 import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from './components/pages/HomePage/Home';
+import Restaurants from './components/pages/RestaurantsPage/Restaurants';
 
 function App() {
 
   return (
     <Router>
       <div className="app">
-        <Header />
         <Switch>
-          <Route path="/">
-            <LatestRestaurants />
-            <MenuCategories />
-          </Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/restaurants" exact component={Restaurants} />
         </Switch>
       </div>
     </Router>
