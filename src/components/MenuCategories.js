@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { kitchens } from '../utils/data';
+import { Link } from 'react-router-dom'
 
 function Home() { 
 
@@ -12,16 +13,29 @@ function Home() {
                         <p className="text-gray text-l ds:text-2xl">
                             What's on the menu?
                         </p>
+                        <Link
+                            to={{
+                                pathname: "/restaurants",
+                                state: { category: "Brazilian" },
+                            }}
+                        >
+                            Go to courses
+                        </Link>
                         <div className="pt-6 flex flex-col flex-wrap ds:flex-row">
                             {kitchens.map((kitchen) => {
                                 const {
                                     type,
-                                    href,
                                 } = kitchen;
                                 return (
-                                    <a href={href} className="bg-yellow py-3 px-6 mr-7 mb-5">
+                                    <Link
+                                        to={{
+                                            pathname: "/restaurants",
+                                            state: { category: type },
+                                        }}
+                                        className="bg-yellow py-3 px-6 mr-7 mb-5"
+                                    >
                                         {type}
-                                    </a>                        
+                                    </Link>                    
                                 );
                                 })}
                         </div>  

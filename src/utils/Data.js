@@ -68,20 +68,16 @@ export const restaurants = [
 
 export const kitchens = [
     {
-      type: 'italian',
-      href: '/restaurants/italian'
+      type: 'Italian'
     },
     {
-      type: 'asian',
-      href: '/restaurants/asian'
+      type: 'Asian'
     },
     {
-      type: 'spanish',
-      href: '/restaurants/spanish'
+      type: 'Spanish'
     },
     {
-      type: 'brazilian',
-      href: '/restaurants/brazilian'
+      type: 'Brazilian'
     }
   ];
   

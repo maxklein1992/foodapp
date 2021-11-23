@@ -9,12 +9,12 @@ import All from './icons/allfood.png';
 import { restaurants } from '../utils/data';
 import Like from './icons/like.png';
 
-function RestaurantsPage() { 
+function RestaurantsPage( {filteredCategory} ) { 
     const [drestaurants, setRestaurants] = useState([])
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [word, setWord] = useState(["All restaurants"])
 
-    var AllFood = drestaurants
+    var AllFood = restaurants
     var ItalianFood = drestaurants.filter(e => e.typeOfFood === "Italian") 
     var AsianFood = drestaurants.filter(e => e.typeOfFood === "Asian") 
     var SpanishFood = drestaurants.filter(e => e.typeOfFood === "Spanish") 
@@ -40,7 +40,7 @@ function RestaurantsPage() {
                 break;     
             case "brazilian":
                 setFilteredRestaurants(BrazilianFood)
-                setWord("Brazilian")                
+                setWord("Brazilian")          
                 break;  
             default:
                 break;
@@ -49,7 +49,13 @@ function RestaurantsPage() {
 
     async function fetchMyAPI() {
         setRestaurants(restaurants);
-        setFilteredRestaurants(restaurants);
+        if(filteredCategory)
+        {
+            setFilteredRestaurants(restaurants.filter(e => e.typeOfFood === filteredCategory));
+            setWord(filteredCategory)
+        } else {
+            setFilteredRestaurants(restaurants)
+        }
     }
 
     React.useEffect(() => {
@@ -97,7 +103,7 @@ function RestaurantsPage() {
                             {word}
                         </p>
                         <div className="grid grid-cols-1 ds:grid-cols-4 gap-2 pt-8">
-                            {filteredRestaurants.length === 0 ? <p>No restaurants available </p> : 
+                            {filteredRestaurants.length === 0 ? <p>No restaurants available</p> : 
                                 filteredRestaurants.map((restaurant) => {
                                     const {
                                         id,
