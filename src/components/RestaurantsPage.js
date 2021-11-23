@@ -62,31 +62,31 @@ function RestaurantsPage() {
                 <div className="pr-12 pl-12 ds:pr-48 ds:pl-48">
                     <div className="grid grid-cols-2 ds:grid-cols-10 gap-2 pt-32 ds:pt-8 font-sans font-bold">
                         <button onClick={() => showFoodType("allfood")} className="ml-16 flex flex-col items-center">
-                            <img src={All} alt="SearchIcon" className="bg-white h-12 w-12" />
+                            <img src={All} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
                             <p className="pt-5 font-bold">
                                 All
                             </p>
                         </button>
                         <button onClick={() => showFoodType("italian")} className="ml-16 flex flex-col items-center">
-                            <img src={Italian} alt="SearchIcon" className="bg-white h-12 w-12" />
+                            <img src={Italian} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
                             <p className="pt-5 font-bold">
                                 Italian
                             </p>
                         </button>
                         <button onClick={() => showFoodType("asian")} className="ml-16 flex flex-col items-center">
-                            <img src={Asian} alt="SearchIcon" className="bg-white h-12 w-12" />
+                            <img src={Asian} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
                             <p className="pt-5 font-bold">
                                 Asian
                             </p>
                         </button>
                         <button onClick={() => showFoodType("spanish")} className="ml-16 flex flex-col items-center">
-                            <img src={Spanish} alt="SearchIcon" className="bg-white h-12 w-12" />
+                            <img src={Spanish} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
                             <p className="pt-5 font-bold">
                                 Spanish
                             </p>
                         </button>
                         <button onClick={() => showFoodType("brazilian")} className="ml-16 flex flex-col items-center">
-                            <img src={Brazilian} alt="SearchIcon" className="bg-white h-12 w-12" />
+                            <img src={Brazilian} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
                             <p className="pt-5 font-bold">
                                 Brazilian
                             </p>
@@ -97,19 +97,20 @@ function RestaurantsPage() {
                             {word}
                         </p>
                         <div className="grid grid-cols-1 ds:grid-cols-4 gap-2 pt-8">
-                            {filteredRestaurants && filteredRestaurants.map((restaurant) => {
-                                const {
-                                    id,
-                                    title,
-                                    alt,
-                                    image,
-                                    city,
-                                    country,
-                                    reviewPercentage,
-                                    numberOfReviews,
-                                    typeOfFood,
-                                    expensiveRate,
-                                } = restaurant;
+                            {filteredRestaurants.length === 0 ? <p>No restaurants available </p> : 
+                                filteredRestaurants.map((restaurant) => {
+                                    const {
+                                        id,
+                                        title,
+                                        alt,
+                                        image,
+                                        city,
+                                        country,
+                                        reviewPercentage,
+                                        numberOfReviews,
+                                        typeOfFood,
+                                        expensiveRate,
+                                    } = restaurant;
                                     return (
                                         <div className="w-full ds:mr-8 pb-4 ds:pt-0">
                                             <div className="">
@@ -140,7 +141,8 @@ function RestaurantsPage() {
                                             </div>
                                         </div>                        
                                     );
-                                })}
+                                })                           
+                            } 
                         </div> 
                     </div> 
                 </div>            
