@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { restaurants } from '../utils/data';
 import Like from './icons/like.png';
 
@@ -33,31 +34,33 @@ function Home() {
                                 } = restaurant;
                                 return (
                                     <div className="w-full ds:mr-8 pb-4 ds:pt-0">
-                                        <div className="">
-                                            <div>
+                                        <div>
+                                            <Link
+                                                to={`/restaurants/${id}`}
+                                            >
                                                 <img 
                                                     src={image}      
                                                     alt={alt}  
-                                                    className="object-cover w-full h-48"         
+                                                    className="object-cover w-72 h-48"         
                                                 />
-                                            </div>
-                                            <div className="pt-4 pl-3">
-                                                <p className="text-yellow text-l">
-                                                    {title}
-                                                </p>
-                                                <p className="text-gray text-sm mt-1">
-                                                    {city}, {country}
-                                                </p>
-                                            </div>
-                                            <div class=" flex flex-row pl-3 mt-2 items-center">
-                                                <img src={Like} alt="Like" className="bg-white h-8 w-8 p-2 ds:p-1 ds:h-6 ds:w-6 ds:p-1" />
-                                                <p className="text-xs text-yellow font-bold pl-1 pt-1/2 font-sans">
-                                                    {reviewPercentage}%
-                                                </p>
-                                                <p className="text-xs text-gray pl-1 pt-1/2 font-sans">
+                                                <div className="pt-4 pl-3">
+                                                    <p className="text-yellow text-l">
+                                                        {title}
+                                                    </p>
+                                                    <p className="text-gray text-sm mt-1">
+                                                        {city}, {country}
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div class=" flex flex-row pl-3 mt-2 items-center">
+                                            <img src={Like} alt="Like" className="bg-white h-8 w-8 p-2 ds:p-1 ds:h-6 ds:w-6 ds:p-1" />
+                                            <p className="text-xs text-yellow font-bold pl-1 pt-1/2 font-sans">
+                                                {reviewPercentage}%
+                                            </p>
+                                            <p className="text-xs text-gray pl-1 pt-1/2 font-sans">
                                                 ({numberOfReviews}) · {typeOfFood} · {expensiveRate}
-                                                </p>
-                                            </div>
+                                            </p>
                                         </div>
                                     </div>                        
                                 );

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Italian from './icons/italian.png';
 import Asian from './icons/asian.png';
 import Spanish from './icons/spanish.png';
@@ -121,19 +121,23 @@ function RestaurantsPage( {filteredCategory} ) {
                                         <div className="w-full ds:mr-8 pb-4 ds:pt-0">
                                             <div className="">
                                                 <div>
-                                                    <img 
-                                                        src={image}      
-                                                        alt={alt}  
-                                                        className="object-cover w-72 h-48"         
-                                                    />
-                                                </div>
-                                                <div className="pt-4 pl-3">
-                                                    <p className="text-yellow text-l">
-                                                        {title}
-                                                    </p>
-                                                    <p className="text-gray text-sm mt-1">
-                                                        {city}, {country}
-                                                    </p>
+                                                    <Link
+                                                        to={`/restaurants/${id}`}
+                                                    >
+                                                        <img 
+                                                            src={image}      
+                                                            alt={alt}  
+                                                            className="object-cover w-72 h-48"         
+                                                        />
+                                                        <div className="pt-4 pl-3">
+                                                            <p className="text-yellow text-l">
+                                                                {title}
+                                                            </p>
+                                                            <p className="text-gray text-sm mt-1">
+                                                                {city}, {country}
+                                                            </p>
+                                                        </div>
+                                                    </Link>
                                                 </div>
                                                 <div class=" flex flex-row pl-3 mt-2 items-center">
                                                     <img src={Like} alt="Like" className="bg-white h-8 w-8 p-2 ds:p-1 ds:h-6 ds:w-6 ds:p-1" />

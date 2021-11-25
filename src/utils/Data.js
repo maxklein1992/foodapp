@@ -1,6 +1,6 @@
 export const restaurants = [
     {
-      id: 1,
+      id: "1",
       title: 'Coach Sports Bar',
       alt: 'coach',
       image:
@@ -13,7 +13,7 @@ export const restaurants = [
       expensiveRate: '€€',
     },
     {
-      id: 2,
+      id: "2",
       title: 'Lat.a Bar',
       alt: 'lata',
       image:
@@ -26,7 +26,7 @@ export const restaurants = [
       expensiveRate: '€€',
     },
     {
-      id: 3,
+      id: "3",
       title: 'Machimbombo',
       alt: 'machimbombo',
       image:
@@ -39,7 +39,7 @@ export const restaurants = [
       expensiveRate: '€€€',
     },
     {
-      id: 4,
+      id: "4",
       title: 'Aqua de Beber',
       alt: 'aquadebeber',
       image:
@@ -52,7 +52,7 @@ export const restaurants = [
       expensiveRate: '€€',
     },
     {
-      id: 5,
+      id: "5",
       title: 'Al Garage',
       alt: 'algarage',
       image:
