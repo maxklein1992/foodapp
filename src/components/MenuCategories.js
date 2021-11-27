@@ -12,14 +12,6 @@ function Home() {
                         <p className="text-gray text-l ds:text-2xl">
                             What's on the menu?
                         </p>
-                        <Link
-                            to={{
-                                pathname: "/restaurants",
-                                state: { category: "Brazilian" },
-                            }}
-                        >
-                            Go to courses
-                        </Link>
                         <div className="pt-6 flex flex-col flex-wrap ds:flex-row">
                             {kitchens.map((kitchen) => {
                                 const {

@@ -1,6 +1,6 @@
 export const restaurants = [
     {
-      id: "1",
+      id: 1,
       title: 'Coach Sports Bar',
       alt: 'coach',
       image:
@@ -11,9 +11,35 @@ export const restaurants = [
       numberOfReviews: 423,
       typeOfFood: 'American',
       expensiveRate: '€€',
+      menu: [
+        {
+          id: 1,
+          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
+          image: '../paoqueijo.png',
+          price: 3
+        },
+        {
+          id: 2,
+          title: "Quacamole e totopos de milho",
+          image: '../nachos.png',
+          price: 6
+        },
+        {
+          id: 3,
+          title: "Pastéis de bobó de camarão (2 UN.)",
+          image: '../pasteisdebobodecamarao.png',
+          price: 5
+        },
+        {
+          id: 4,
+          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
+          image: '../pasteisdefrango.png',
+          price: 5
+        }
+      ]
     },
     {
-      id: "2",
+      id: 2,
       title: 'Lat.a Bar',
       alt: 'lata',
       image:
@@ -24,9 +50,35 @@ export const restaurants = [
       numberOfReviews: 213,
       typeOfFood: 'Brazilian',
       expensiveRate: '€€',
+      menu: [
+        {
+          id: 1,
+          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
+          image: '../paoqueijo.png',
+          price: 3
+        },
+        {
+          id: 2,
+          title: "Quacamole e totopos de milho",
+          image: '../nachos.png',
+          price: 6
+        },
+        {
+          id: 3,
+          title: "Pastéis de bobó de camarão (2 UN.)",
+          image: '../pasteisdebobodecamarao.png',
+          price: 5
+        },
+        {
+          id: 4,
+          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
+          image: '../pasteisdefrango.png',
+          price: 5
+        }
+      ]
     },
     {
-      id: "3",
+      id: 3,
       title: 'Machimbombo',
       alt: 'machimbombo',
       image:
@@ -37,9 +89,35 @@ export const restaurants = [
       numberOfReviews: 111,
       typeOfFood: 'Portuguese',
       expensiveRate: '€€€',
+      menu: [
+        {
+          id: 1,
+          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
+          image: '../paoqueijo.png',
+          price: 3
+        },
+        {
+          id: 2,
+          title: "Quacamole e totopos de milho",
+          image: '../nachos.png',
+          price: 6
+        },
+        {
+          id: 3,
+          title: "Pastéis de bobó de camarão (2 UN.)",
+          image: '../pasteisdebobodecamarao.png',
+          price: 5
+        },
+        {
+          id: 4,
+          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
+          image: '../pasteisdefrango.png',
+          price: 5
+        }
+      ]
     },
     {
-      id: "4",
+      id: 4,
       title: 'Aqua de Beber',
       alt: 'aquadebeber',
       image:
@@ -50,37 +128,94 @@ export const restaurants = [
       numberOfReviews: 1213,
       typeOfFood: 'Brazilian',
       expensiveRate: '€€',
+      menu: [
+        {
+          id: 1,
+          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
+          image: '../paoqueijo.png',
+          price: 3
+        },
+        {
+          id: 2,
+          title: "Quacamole e totopos de milho",
+          image: '../nachos.png',
+          price: 6
+        },
+        {
+          id: 3,
+          title: "Pastéis de bobó de camarão (2 UN.)",
+          image: '../pasteisdebobodecamarao.png',
+          price: 5
+        },
+        {
+          id: 4,
+          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
+          image: '../pasteisdefrango.png',
+          price: 5
+        }
+      ]
     },
     {
-      id: "5",
+      id: 5,
       title: 'Al Garage',
       alt: 'algarage',
       image:
-        '../aquadebeber.png',
+        '../algarage.png',
       city: `Lisbon`,
       country: "Portugal",
       reviewPercentage: 90,
       numberOfReviews: 313,
       typeOfFood: 'Italian',
       expensiveRate: '€€',
+      menu: [
+        {
+          id: 1,
+          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
+          image: '../paoqueijo.png',
+          price: 3
+        },
+        {
+          id: 2,
+          title: "Quacamole e totopos de milho",
+          image: '../nachos.png',
+          price: 6
+        },
+        {
+          id: 3,
+          title: "Pastéis de bobó de camarão (2 UN.)",
+          image: '../pasteisdebobodecamarao.png',
+          price: 5
+        },
+        {
+          id: 4,
+          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
+          image: '../pasteisdefrango.png',
+          price: 5
+        }
+      ]
     },
-  ];
+];
 
 export const kitchens = [
     {
-      type: 'All'
+      type: 'All',
+      name: 'All restaurants'
     },
     {
-      type: 'Italian'
+      type: 'Italian',
+      name: 'Italian'
     },
     {
-      type: 'Asian'
+      type: 'Asian',
+      name: 'Asian'
     },
     {
-      type: 'Spanish'
+      type: 'Spanish',
+      name: 'Spanish'
     },
     {
-      type: 'Brazilian'
+      type: 'Brazilian',
+      name: 'Brazilian'
     }
-  ];
+];
   

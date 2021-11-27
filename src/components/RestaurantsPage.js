@@ -1,11 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Italian from './icons/Italian.png';
-import Asian from './icons/Asian.png';
-import Spanish from './icons/Spanish.png';
-import Brazilian from './icons/Brazilian.png';
-import All from './icons/All.png';
 import { restaurants } from '../utils/data';
 import { kitchens } from '../utils/data';
 import Like from './icons/like.png';
@@ -15,42 +10,20 @@ function RestaurantsPage( {filteredCategory} ) {
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [word, setWord] = useState(["All restaurants"])
 
-    var AllFood = restaurants
-    var ItalianFood = drestaurants.filter(e => e.typeOfFood === "Italian") 
-    var AsianFood = drestaurants.filter(e => e.typeOfFood === "Asian") 
-    var SpanishFood = drestaurants.filter(e => e.typeOfFood === "Spanish") 
-    var BrazilianFood = drestaurants.filter(e => e.typeOfFood === "Brazilian") 
-
-    function showFoodType(foodType) {
-        switch (foodType) {
-            case "All":
-                setFilteredRestaurants(AllFood)
-                setWord("All restaurants")                
-                break;
-            case "Italian":
-                setFilteredRestaurants(ItalianFood)
-                setWord("Italian")                
-                break;
-            case "Asian":
-                setFilteredRestaurants(AsianFood)
-                setWord("Asian")                
-                break;     
-            case "Spanish":
-                setFilteredRestaurants(SpanishFood)
-                setWord("Spanish")                
-                break;     
-            case "Brazilian":
-                setFilteredRestaurants(BrazilianFood)
-                setWord("Brazilian")          
-                break;  
-            default:
-                break;
+    function showFoodType(type, name) {
+        if(type !== "All")
+        {
+            setFilteredRestaurants(restaurants.filter(e => e.typeOfFood === type));
+            setWord(name)     
+        } else {
+            setFilteredRestaurants(restaurants);
+            setWord(name)  
         }
     }
 
     async function fetchMyAPI() {
         setRestaurants(restaurants);
-        if(filteredCategory)
+        if(filteredCategory && filteredCategory !== "All")
         {
             setFilteredRestaurants(restaurants.filter(e => e.typeOfFood === filteredCategory));
             setWord(filteredCategory)
@@ -70,11 +43,12 @@ function RestaurantsPage( {filteredCategory} ) {
                     <div className="grid grid-cols-2 ds:grid-cols-10 gap-2 pt-32 ds:pt-8 font-sans font-bold">
                     {kitchens.map((kitchen) => {
                                     const {
-                                        type
+                                        type,
+                                        name
                                     } = kitchen;
                                     return (
-                                        <button onClick={() => showFoodType(type)} className="ml-16 flex flex-col items-center">
-                                            <img src={require('./icons/' + type + '.png').default} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
+                                        <button onClick={() => showFoodType(type, name)} className="ml-16 flex flex-col items-center">
+                                            <img src={require('./icons/categories/' + type + '.png').default} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
                                             <p className="pt-5 font-bold">
                                                 {type}
                                             </p>
