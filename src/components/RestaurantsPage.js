@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Italian from './icons/italian.png';
-import Asian from './icons/asian.png';
-import Spanish from './icons/spanish.png';
-import Brazilian from './icons/brazilian.png';
-import All from './icons/allfood.png';
+import Italian from './icons/Italian.png';
+import Asian from './icons/Asian.png';
+import Spanish from './icons/Spanish.png';
+import Brazilian from './icons/Brazilian.png';
+import All from './icons/All.png';
 import { restaurants } from '../utils/data';
+import { kitchens } from '../utils/data';
 import Like from './icons/like.png';
 
 function RestaurantsPage( {filteredCategory} ) { 
@@ -22,23 +23,23 @@ function RestaurantsPage( {filteredCategory} ) {
 
     function showFoodType(foodType) {
         switch (foodType) {
-            case "allfood":
+            case "All":
                 setFilteredRestaurants(AllFood)
                 setWord("All restaurants")                
                 break;
-            case "italian":
+            case "Italian":
                 setFilteredRestaurants(ItalianFood)
                 setWord("Italian")                
                 break;
-            case "asian":
+            case "Asian":
                 setFilteredRestaurants(AsianFood)
                 setWord("Asian")                
                 break;     
-            case "spanish":
+            case "Spanish":
                 setFilteredRestaurants(SpanishFood)
                 setWord("Spanish")                
                 break;     
-            case "brazilian":
+            case "Brazilian":
                 setFilteredRestaurants(BrazilianFood)
                 setWord("Brazilian")          
                 break;  
@@ -67,36 +68,20 @@ function RestaurantsPage( {filteredCategory} ) {
             <div className="w-full">
                 <div className="pr-12 pl-12 ds:pr-48 ds:pl-48">
                     <div className="grid grid-cols-2 ds:grid-cols-10 gap-2 pt-32 ds:pt-8 font-sans font-bold">
-                        <button onClick={() => showFoodType("allfood")} className="ml-16 flex flex-col items-center">
-                            <img src={All} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
-                            <p className="pt-5 font-bold">
-                                All
-                            </p>
-                        </button>
-                        <button onClick={() => showFoodType("italian")} className="ml-16 flex flex-col items-center">
-                            <img src={Italian} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
-                            <p className="pt-5 font-bold">
-                                Italian
-                            </p>
-                        </button>
-                        <button onClick={() => showFoodType("asian")} className="ml-16 flex flex-col items-center">
-                            <img src={Asian} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
-                            <p className="pt-5 font-bold">
-                                Asian
-                            </p>
-                        </button>
-                        <button onClick={() => showFoodType("spanish")} className="ml-16 flex flex-col items-center">
-                            <img src={Spanish} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
-                            <p className="pt-5 font-bold">
-                                Spanish
-                            </p>
-                        </button>
-                        <button onClick={() => showFoodType("brazilian")} className="ml-16 flex flex-col items-center">
-                            <img src={Brazilian} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
-                            <p className="pt-5 font-bold">
-                                Brazilian
-                            </p>
-                        </button>
+                    {kitchens.map((kitchen) => {
+                                    const {
+                                        type
+                                    } = kitchen;
+                                    return (
+                                        <button onClick={() => showFoodType(type)} className="ml-16 flex flex-col items-center">
+                                            <img src={require('./icons/' + type + '.png').default} alt="SearchIcon" className="bg-white h-12 w-12 p-1" />
+                                            <p className="pt-5 font-bold">
+                                                {type}
+                                            </p>
+                                        </button>
+                                    );
+                        })                           
+                    } 
                     </div>
                     <div className="pt-14">
                         <p className="text-gray text-l ds:text-2xl">

@@ -68,6 +68,9 @@ export const restaurants = [
 
 export const kitchens = [
     {
+      type: 'All'
+    },
+    {
       type: 'Italian'
     },
     {
