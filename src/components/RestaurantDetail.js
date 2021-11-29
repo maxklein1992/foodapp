@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { restaurants } from "../utils/data";
 import { useParams } from "react-router-dom";
+import MenuItemCard from "./MenuItemCard";
 
 function RestaurantsPage() {
   const { id } = useParams();
@@ -46,18 +47,15 @@ function RestaurantsPage() {
                         ({numberOfReviews}) · {typeOfFood} · {expensiveRate}
                       </p>
                     </div>
-                    <div class="grid grid-cols-1 ds:grid-cols-3 gap-2 pt-8">
+                    <div class="grid grid-cols-1 ds:grid-cols-4 gap-2 pt-8">
                       {restaurant.menu.map((item, i) => (
-                        <div key={i}>
-                          <img
-                            src={item.image}
-                            alt="menu item"
-                            className="object-cover w-64 h-48 transform hover:scale-105"
-                          />
-                          <h3 class="font-bold font-sans text-sm">
-                            {item.id}. {item.title}
-                          </h3>
-                        </div>
+                        <MenuItemCard
+                          id={id}
+                          title={item.title}
+                          price={item.price}
+                          image={item.image}
+                          alt={item.title}
+                        />
                       ))}
                     </div>
                   </div>
