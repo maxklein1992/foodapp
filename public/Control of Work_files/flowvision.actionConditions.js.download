@@ -1,0 +1,287 @@
+﻿window.actionConditions = (function() {
+  // this file contains generated code for region 'Global'. Do not modify, your changes will be overwritten!!!
+  /* tslint:disable:comma-dangle no-unused-variable no-unused-vars no-trailing-whitespace no-unreachable max-line-length curly comment-format no-trailing-comma */
+  /* action availability conditions cannot easily be retrieved by a unique identifier. SO, we access them via the convention [kind]_[index] */
+  var _log;
+  var log = function() {
+    if (!_log) {
+      _log = logger.getLoggerFor('editabilityPolicy');
+    }
+    _log(arguments);
+  };
+  return {
+    Isolation_10: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['RequestedForSanctionToTest'], cert.state))) {
+          return false;
+        }
+        if (!(certificateMethods.hasRequestedDeisolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_11: {
+      isRequired: function(cert, user) {
+        if (!(cert.instructionPlanInfo && cert.instructionPlanInfo.allDeisolationInstructionsPerformed)) {
+          return false;
+        }
+        if (!(_.includes(['Deisolated', 'IsolationInPlaceForSanctionToTest'], cert.state))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_12: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['IsolationInPlace', 'RequestedForSanctionToTest'], cert.state))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_13: {
+      isRequired: function(cert, user) {
+        if ((certificateMethods.hasRequestedDeisolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        if (!(_.includes(['RequestedForSanctionToTest'], cert.state))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_14: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['IsolationInPlaceForSanctionToTest', 'RequestedForReisolation'], cert.state))) {
+          return false;
+        }
+        if (!(cert.hasParents(['Permit'], ['SuspendedForRevalidation', 'SuspendedForEmergency']))) {
+          return false;
+        }
+        if (!(cert.instructionPlanInfo && certificateMethods.hasUnrequestedIsolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_15: {
+      isRequired: function(cert, user) {
+        if (!(certificateMethods.hasRequestedIsolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        if (!(_.includes(['RequestedForReisolation'], cert.state))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_16: {
+      isRequired: function(cert, user) {
+        if ((certificateMethods.hasRequestedIsolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        if (!(_.includes(['RequestedForReisolation'], cert.state))) {
+          return false;
+        }
+        if (!(cert.instructionPlanInfo && cert.instructionPlanInfo.allIsolationInstructionsPerformed)) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_17: {
+      isRequired: function(cert, user) {
+        return false;
+      },
+      isOptional: function(cert, user) {
+        if (!(certificateMethods.hasRequestedIsolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        if (!(_.includes(['IsolationInProgress'], cert.state))) {
+          return false;
+        }
+        return true;
+      }
+    },
+    Isolation_18: {
+      isRequired: function(cert, user) {
+        return false;
+      },
+      isOptional: function(cert, user) {
+        if (!(certificateMethods.hasRequestedDeisolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        if (!(_.includes(['DeisolationInProgress'], cert.state))) {
+          return false;
+        }
+        return true;
+      }
+    },
+    Isolation_19: {
+      isRequired: function(cert, user) {
+        return false;
+      },
+      isOptional: function(cert, user) {
+        if (!(certificateMethods.hasRequestedIsolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        if (!(_.includes(['RequestedForReisolation'], cert.state))) {
+          return false;
+        }
+        return true;
+      }
+    },
+    Isolation_20: {
+      isRequired: function(cert, user) {
+        return false;
+      },
+      isOptional: function(cert, user) {
+        if (!(certificateMethods.hasRequestedDeisolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        if (!(_.includes(['RequestedForSanctionToTest'], cert.state))) {
+          return false;
+        }
+        return true;
+      }
+    },
+    Isolation_4: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['AwaitingAuthorisation', 'IsolationInProgress', 'AwaitingAuthorisationForAmendment', 'IsolationInProgressForAmendment'], cert.state))) {
+          return false;
+        }
+        if (!(cert.instructionPlanInfo && certificateMethods.hasUnrequestedIsolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_5: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['IsolationInProgress', 'RequestedForAmendment', 'IsolationInProgressForAmendment'], cert.state))) {
+          return false;
+        }
+        if (!(certificateMethods.hasRequestedIsolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_6: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['AwaitingAuthorisation', 'IsolationInProgress', 'AwaitingAuthorisationForAmendment', 'IsolationInProgressForAmendment'], cert.state))) {
+          return false;
+        }
+        if (!(cert.instructionPlanInfo && cert.instructionPlanInfo.allIsolationInstructionsPerformed)) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_8: {
+      isRequired: function(cert, user) {
+        if (!(cert.instructionPlanInfo && certificateMethods.hasUnrequestedDeisolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        if (!(_.includes(['IsolationInPlace', 'DeisolationInProgress', 'IsolationInPlaceForSanctionToTest', 'IsolationInPlaceForLongTerm'], cert.state))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Isolation_9: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['DeisolationInProgress'], cert.state))) {
+          return false;
+        }
+        if (!(certificateMethods.hasRequestedDeisolations(cert.instructionPlanInfo, []))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    ManualDataEntry_5: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['AwaitingApproval'], cert.state))) {
+          return false;
+        }
+        if (!(cert.textProperties && _.includes(['Yes'], cert.textProperties.DateRangeRequired))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    ManualDataEntry_6: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['AwaitingApproval'], cert.state))) {
+          return false;
+        }
+        if (!(cert.textProperties && _.includes(['No'], cert.textProperties.DateRangeRequired))) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        return true;
+      }
+    },
+    Permit_27: {
+      isRequired: function(cert, user) {
+        if (!(_.includes(['SuspendedForRevalidation', 'SuspendedForEmergency', 'SuspendedForSanctionToTest', 'AwaitingIssue'], cert.state))) {
+          return false;
+        }
+        if (!(cert.measurementRequirements && cert.measurementRequirements.requiredMeasurements
+        && cert.measurementRequirements.requiredMeasurements.length > 0)) {
+          return false;
+        }
+        return true;
+      },
+      isOptional: function(cert, user) {
+        if (!(_.includes(['AwaitingVerification', 'AwaitingAuthorisation', 'Issued', 'Active', 'ActiveForSanctionToTest', 'ReIssuedForSanctionToTest', 'ReIssued', 'Revalidate', 'AwaitingActivation', 'SuspensionInProgress', 'Requesting', 'DraftShutdown', 'Closing'], cert.state))) {
+          return false;
+        }
+        return true;
+      }
+    }
+  };
+})();
