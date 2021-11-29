@@ -18,7 +18,7 @@ function Home() {
                       pathname: "/restaurants",
                       state: { category: type },
                     }}
-                    className="bg-yellow py-3 px-6 mr-7 mb-5"
+                    className="bg-yellow py-3 px-6 mr-7 mb-5 transform hover:scale-105 hover:opacity-80 ease-out duration-700 rounded-lg shadow-lg"
                   >
                     {type}
                   </Link>
