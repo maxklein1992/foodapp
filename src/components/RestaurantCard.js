@@ -21,7 +21,7 @@ function RestaurantsPage({
           <img
             src={image}
             alt={alt}
-            className="object-cover w-64 h-48 transform hover:scale-105 ease-out duration-700"
+            className="object-cover w-64 h-48 transform hover:scale-105 ease-out duration-700 rounded-lg shadow-lg"
           />
           <div className="pt-4 pl-3">
             <p className="text-yellow text-l">{title}</p>

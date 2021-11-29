@@ -50,7 +50,7 @@ function RestaurantsPage() {
                     <div class="grid grid-cols-1 ds:grid-cols-4 gap-2 pt-8">
                       {restaurant.menu.map((item, i) => (
                         <MenuItemCard
-                          id={id}
+                          id={item.id}
                           title={item.title}
                           price={item.price}
                           image={item.image}
