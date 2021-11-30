@@ -1,221 +1,197 @@
 export const restaurants = [
-    {
-      id: 1,
-      title: 'Coach Sports Bar',
-      alt: 'coach',
-      image:
-        '../coach.png',
-      city: `Lisbon`,
-      country: `Portugal`,
-      reviewPercentage: 89,
-      numberOfReviews: 423,
-      typeOfFood: 'American',
-      expensiveRate: '€€',
-      menu: [
-        {
-          id: 1,
-          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
-          image: '../paoqueijo.png',
-          price: 3
-        },
-        {
-          id: 2,
-          title: "Quacamole e totopos de milho",
-          image: '../nachos.png',
-          price: 6
-        },
-        {
-          id: 3,
-          title: "Pastéis de bobó de camarão (2 UN.)",
-          image: '../pasteisdebobodecamarao.png',
-          price: 5
-        },
-        {
-          id: 4,
-          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
-          image: '../pasteisdefrango.png',
-          price: 5
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: 'Lat.a Bar',
-      alt: 'lata',
-      image:
-        '../lata.png',
-      city: `Lisbon`,
-      country: "Portugal",
-      reviewPercentage: 98,
-      numberOfReviews: 213,
-      typeOfFood: 'Brazilian',
-      expensiveRate: '€€',
-      menu: [
-        {
-          id: 1,
-          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
-          image: '../paoqueijo.png',
-          price: 3
-        },
-        {
-          id: 2,
-          title: "Quacamole e totopos de milho",
-          image: '../nachos.png',
-          price: 6
-        },
-        {
-          id: 3,
-          title: "Pastéis de bobó de camarão (2 UN.)",
-          image: '../pasteisdebobodecamarao.png',
-          price: 5
-        },
-        {
-          id: 4,
-          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
-          image: '../pasteisdefrango.png',
-          price: 5
-        }
-      ]
-    },
-    {
-      id: 3,
-      title: 'Machimbombo',
-      alt: 'machimbombo',
-      image:
-        '../machimbombo.png',
-      city: `Lisbon`,
-      country: "Portugal",
-      reviewPercentage: 74,
-      numberOfReviews: 111,
-      typeOfFood: 'Portuguese',
-      expensiveRate: '€€€',
-      menu: [
-        {
-          id: 1,
-          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
-          image: '../paoqueijo.png',
-          price: 3
-        },
-        {
-          id: 2,
-          title: "Quacamole e totopos de milho",
-          image: '../nachos.png',
-          price: 6
-        },
-        {
-          id: 3,
-          title: "Pastéis de bobó de camarão (2 UN.)",
-          image: '../pasteisdebobodecamarao.png',
-          price: 5
-        },
-        {
-          id: 4,
-          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
-          image: '../pasteisdefrango.png',
-          price: 5
-        }
-      ]
-    },
-    {
-      id: 4,
-      title: 'Aqua de Beber',
-      alt: 'aquadebeber',
-      image:
-        '../aquadebeber.png',
-      city: `Lisbon`,
-      country: "Portugal",
-      reviewPercentage: 95,
-      numberOfReviews: 1213,
-      typeOfFood: 'Brazilian',
-      expensiveRate: '€€',
-      menu: [
-        {
-          id: 1,
-          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
-          image: '../paoqueijo.png',
-          price: 3
-        },
-        {
-          id: 2,
-          title: "Quacamole e totopos de milho",
-          image: '../nachos.png',
-          price: 6
-        },
-        {
-          id: 3,
-          title: "Pastéis de bobó de camarão (2 UN.)",
-          image: '../pasteisdebobodecamarao.png',
-          price: 5
-        },
-        {
-          id: 4,
-          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
-          image: '../pasteisdefrango.png',
-          price: 5
-        }
-      ]
-    },
-    {
-      id: 5,
-      title: 'Al Garage',
-      alt: 'algarage',
-      image:
-        '../algarage.png',
-      city: `Lisbon`,
-      country: "Portugal",
-      reviewPercentage: 90,
-      numberOfReviews: 313,
-      typeOfFood: 'Italian',
-      expensiveRate: '€€',
-      menu: [
-        {
-          id: 1,
-          title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
-          image: '../paoqueijo.png',
-          price: 3
-        },
-        {
-          id: 2,
-          title: "Quacamole e totopos de milho",
-          image: '../nachos.png',
-          price: 6
-        },
-        {
-          id: 3,
-          title: "Pastéis de bobó de camarão (2 UN.)",
-          image: '../pasteisdebobodecamarao.png',
-          price: 5
-        },
-        {
-          id: 4,
-          title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
-          image: '../pasteisdefrango.png',
-          price: 5
-        }
-      ]
-    },
+  {
+    id: 1,
+    title: "Coach Sports Bar",
+    alt: "coach",
+    image: "../coach.png",
+    city: `Lisbon`,
+    country: `Portugal`,
+    reviewPercentage: 89,
+    numberOfReviews: 423,
+    typeOfFood: "American",
+    expensiveRate: "€€",
+    menu: [
+      {
+        id: 1,
+        title: "Focaccia Bruschetta",
+        image: "../bruschetta.png",
+        price: 3.0,
+      },
+      {
+        id: 2,
+        title: "Calamares",
+        image: "../calamares.png",
+        price: 7.5,
+      },
+      {
+        id: 3,
+        title: "Croquetes (2 UN)",
+        image: "../croquetes.png",
+        price: 3.0,
+      },
+      {
+        id: 4,
+        title: "Nuggets de Frango",
+        image: "../nuggetsdefrango.png",
+        price: 7.0,
+      },
+      {
+        id: 5,
+        title: "Asas de frango",
+        image: "../asasdefrango.png",
+        price: 6.5,
+      },
+      {
+        id: 6,
+        title: "Pica pau da vazia",
+        image: "../picapaudavazia.png",
+        price: 6.5,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Lat.a Bar",
+    alt: "lata",
+    image: "../lata.png",
+    city: `Lisbon`,
+    country: "Portugal",
+    reviewPercentage: 98,
+    numberOfReviews: 213,
+    typeOfFood: "Brazilian",
+    expensiveRate: "€€",
+    menu: [
+      {
+        id: 1,
+        title: "Pão de queijo e Biscoitos de Polvinho (4 UN.)",
+        image: "../paoqueijo.png",
+        price: 3,
+      },
+      {
+        id: 2,
+        title: "Quacamole e totopos de milho",
+        image: "../nachos.png",
+        price: 6,
+      },
+      {
+        id: 3,
+        title: "Pastéis de bobó de camarão (2 UN.)",
+        image: "../pasteisdebobodecamarao.png",
+        price: 5,
+      },
+      {
+        id: 4,
+        title: "Pastéis de frango e catupiry com pico de galo (2 UN.)",
+        image: "../pasteisdefrango.png",
+        price: 5,
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Machimbombo",
+    alt: "machimbombo",
+    image: "../machimbombo.png",
+    city: `Lisbon`,
+    country: "Portugal",
+    reviewPercentage: 74,
+    numberOfReviews: 111,
+    typeOfFood: "Portuguese",
+    expensiveRate: "€€€",
+    menu: [
+      {
+        id: 1,
+        title: "Char Siu",
+        image: "../charsiu.png",
+        price: 6.0,
+      },
+      {
+        id: 2,
+        title: "Frutos do mar",
+        image: "../frutosdomar.png",
+        price: 7.5,
+      },
+      {
+        id: 3,
+        title: "Wild Mushroom (vegan)",
+        image: "../wildmushroom.png",
+        price: 5,
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Aqua de Beber",
+    alt: "aquadebeber",
+    image: "../aquadebeber.png",
+    city: `Lisbon`,
+    country: "Portugal",
+    reviewPercentage: 95,
+    numberOfReviews: 1213,
+    typeOfFood: "Brazilian",
+    expensiveRate: "€€",
+    menu: [
+      {
+        id: 1,
+        title: "Caldinho de feijão",
+        image: "../caldinho.png",
+        price: 3.0,
+      },
+      {
+        id: 2,
+        title: "Pão de queijo (8 UN)",
+        image: "../pãodequeijo.png",
+        price: 5.0,
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Al Garage",
+    alt: "algarage",
+    image: "../algarage.png",
+    city: `Lisbon`,
+    country: "Portugal",
+    reviewPercentage: 90,
+    numberOfReviews: 313,
+    typeOfFood: "Italian",
+    expensiveRate: "€€",
+    menu: [
+      {
+        id: 1,
+        title: "Grissini",
+        image: "../grissini.png",
+        price: 0.5,
+      },
+      {
+        id: 2,
+        title: "Antipasto Fellini",
+        image: "../fellini.png",
+        price: 6,
+      },
+    ],
+  },
 ];
 
 export const kitchens = [
-    {
-      type: 'All',
-      name: 'All restaurants'
-    },
-    {
-      type: 'Italian',
-      name: 'Italian'
-    },
-    {
-      type: 'Asian',
-      name: 'Asian'
-    },
-    {
-      type: 'Spanish',
-      name: 'Spanish'
-    },
-    {
-      type: 'Brazilian',
-      name: 'Brazilian'
-    }
+  {
+    type: "All",
+    name: "All restaurants",
+  },
+  {
+    type: "Italian",
+    name: "Italian",
+  },
+  {
+    type: "Asian",
+    name: "Asian",
+  },
+  {
+    type: "Spanish",
+    name: "Spanish",
+  },
+  {
+    type: "Brazilian",
+    name: "Brazilian",
+  },
 ];
-  
