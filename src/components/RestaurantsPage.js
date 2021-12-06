@@ -39,13 +39,13 @@ function RestaurantsPage({ filteredCategory }) {
     <div>
       <div className="w-full">
         <div className="pr-12 pl-12 ds:pr-48 ds:pl-48">
-          <div className="grid grid-cols-2 ds:grid-cols-10 gap-2 pt-32 ds:pt-8 font-sans font-bold">
+          <div className="grid grid-cols-2 ds:grid-cols-10 gap-2 pt-16 ds:pt-8 font-sans font-bold">
             {kitchens.map((kitchen) => {
               const { type, name } = kitchen;
               return (
                 <button
                   onClick={() => showFoodType(type, name)}
-                  className="ml-16 flex flex-col items-center"
+                  className="ds:ml-16 flex flex-col items-center"
                 >
                   <img
                     src={require("./icons/categories/" + type + ".png").default}
